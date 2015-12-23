@@ -1,0 +1,12 @@
+<ion-view view-title="Jokes">
+  <ion-content class="padding">
+    <div class="image-ctn" ng-click="getNewJoke()">
+      <img ng-src="img/jester_hat.png"/>
+    </div>
+    <div class="joke-text" ng-bind-html="joke"></div>
+    <button class="button button-assertive button-full" ng-click="favoritar(joke)">
+      <i class="ion ion-heart"></i>
+      Favoritar
+    </button>
+  </ion-content>
+</ion-view>

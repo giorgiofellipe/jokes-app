@@ -1,0 +1,13 @@
+<ion-view view-title="Favoritos">
+  <ion-content>
+    <ion-refresher on-refresh="refresh()" pulling-text="Solte para atualizar" spinner="dots"></ion-refresher>
+    <ion-list>
+      <ion-item class="item-text-wrap" collection-repeat="joke in favorites">
+        <div ng-bind-html="joke.text"></div>
+        <p>{{joke.date | date:"dd/MM/yy"}}</p>
+
+        <ion-option-button class="button button-assertive" ng-click="deletar(joke)">Deletar</ion-option-button>
+      </ion-item>
+    </ion-list>
+  </ion-content>
+</ion-view>
